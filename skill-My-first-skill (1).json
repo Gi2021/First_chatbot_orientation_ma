@@ -1,0 +1,563 @@
+{
+  "intents": [
+    {
+      "intent": "besoin_organiser_match",
+      "examples": [
+        {
+          "text": "de quoi j'ai besoin pour organiser un match de foot ?"
+        },
+        {
+          "text": "les besoins pour organiser un match de foot ?"
+        },
+        {
+          "text": "pour organiser un match de foot , j'ai besoin de quoi ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "issamQ1",
+      "examples": [
+        {
+          "text": "Peut-on marquer un but directement à partir d'un coup franc ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "issamQ2",
+      "examples": [
+        {
+          "text": "Un joueur est-il autorisé à porter des lunettes pendant une rencontre ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "issamQ3",
+      "examples": [
+        {
+          "text": "Peut-on marquer un but directement sur une touche ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "issamQ4",
+      "examples": [
+        {
+          "text": "Comment doit être donné le coup d’envoi ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "nbr_joueur",
+      "examples": [
+        {
+          "text": "est ce que il y' a nombre de joueur fixe par équipe ?"
+        },
+        {
+          "text": "Nombre de joueur par équipe ?"
+        },
+        {
+          "text": "quelles est le nombre des joueurs d'un équipe ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Q1Egagnant_match",
+      "examples": [
+        {
+          "text": "comment on peut déclarer un gagnant d'un match ?"
+        },
+        {
+          "text": "qui gagne le match ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Q1hje_marque-mi-temps",
+      "examples": [
+        {
+          "text": "Comment on marque la fin des mi-temps ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Q2Eegualite",
+      "examples": [
+        {
+          "text": "Que faire s'il y a égalité ?"
+        },
+        {
+          "text": "s'il y a égalité , que faire ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Q2Sincomplete",
+      "examples": [
+        {
+          "text": "si une équipe est incomplète ?"
+        },
+        {
+          "text": "Si une équipe n'arrive pas ?"
+        },
+        {
+          "text": "Si une équipe n'est pas complète ou n'arrive pas ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Q3Eprologation",
+      "examples": [
+        {
+          "text": "C'est quoi une prolongation ?"
+        },
+        {
+          "text": "Prolongation ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Q3hjeblessure",
+      "examples": [
+        {
+          "text": "En cas de panne ou blessure, qu'est ce que on fait ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Q3Sdureematch",
+      "examples": [
+        {
+          "text": "combien la durée du match ?"
+        },
+        {
+          "text": "la durée du match ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Q4EdureeMi-temps",
+      "examples": [
+        {
+          "text": "La durée de chaque mi-temps ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Q4hje_choisir_un_terrain",
+      "examples": [
+        {
+          "text": "comment on choisit le terrain et le temps du match ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Q4Sduree_meta",
+      "examples": [
+        {
+          "text": "combien la durée de chaque meta ?"
+        },
+        {
+          "text": "la durée de chaque meta ?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Q5Sduree_entre_meta",
+      "examples": [],
+      "description": ""
+    },
+    {
+      "intent": "Q5Sdureeentremeta",
+      "examples": [
+        {
+          "text": "la durée de pause entre les deux meta ?"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Je n'ai pas compris. Vous pouvez essayer de reformuler."
+              },
+              {
+                "text": "Pouvez-vous reformuler votre déclaration? Je ne comprends pas."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_6_1590458614854",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "la durée de pause entre les deux meta est 15 min"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Q5Sdureeentremeta",
+      "dialog_node": "node_10_1590520915202",
+      "previous_sibling": "node_9_1590520877658"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Extension du match qui dure 30 min"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Q3Eprologation",
+      "dialog_node": "node_1_1590521112417",
+      "previous_sibling": "node_8_1590521085041"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "consentement entre les joueurs"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Q4hje_choisir_un_terrain",
+      "dialog_node": "node_1_1590521478129",
+      "previous_sibling": "node_8_1590521352249"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "NON. Si le but est marqué dans le camp adverse, le jeu sera repris par un dégagement en coup de pied de but (plus communément appelé « six mètres »). \nDans le cas où le joueur envoie le ballon dans son propre but, un corner sera accordé à l’équipe adverse."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#issamQ3",
+      "dialog_node": "node_4_1590522558992",
+      "previous_sibling": "node_9_1590522519054"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Pour organiser un match il faut : \n- Un stade disponible .\n- Un ballon de foot\n- Au moins deux équipes de 11 joueurs \n- Au Moins un arbite "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#besoin_organiser_match",
+      "dialog_node": "node_6_1590458614854",
+      "previous_sibling": "node_7_1590458342917"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "l'équipe qui a marqué le plus de buts"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Q1Egagnant_match",
+      "dialog_node": "node_6_1590521053442",
+      "previous_sibling": "node_10_1590520915202"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "le nombre des joueurs d'un match de foot est 11 par équipe ."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#nbr_joueur",
+      "dialog_node": "node_7_1590458342917",
+      "previous_sibling": "node_1_1590521478129"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "L'équipe adversaire est la gagnante !"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Q2Sincomplete",
+      "dialog_node": "node_7_1590506930686",
+      "previous_sibling": "node_7_1590522576694"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Le choix des camps est déterminé par le tirage au sort. L’équipe favorisée par le sort choisit son camp, l’autre équipe bénéficie du\ncoup d’envoi."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#issamQ4",
+      "dialog_node": "node_7_1590522576694",
+      "previous_sibling": "node_4_1590522558992"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Prolongation ou tir au but"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Q2Eegualite",
+      "dialog_node": "node_8_1590521085041",
+      "previous_sibling": "node_6_1590521053442"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "15 min"
+              },
+              {
+                "text": " l'arbitre siffle pour déclarer la fin de la 1er/2eme mi-temps"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Q1hje_marque-mi-temps",
+      "dialog_node": "node_8_1590521144015",
+      "previous_sibling": "node_1_1590521112417"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "l'arbitre siffle pause de jeux et on appelle les parties concernées"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Q3hjeblessure",
+      "dialog_node": "node_8_1590521352249",
+      "previous_sibling": "node_8_1590521144015"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Les coups francs se distinguent en deux catégories, les directs et les indirects : \n        -Sur coup franc indirect le ballon rentre directement dans le but adverse…\n        -Sur coup franc indirect, un but ne peut être marqué que si le ballon a été "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#issamQ1",
+      "dialog_node": "node_8_1590522490774",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "la durée d'une match est 90 min"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Q3Sdureematch",
+      "dialog_node": "node_9_1590520877658",
+      "previous_sibling": "node_7_1590506930686"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "le port des lunettes présentant un risque de blessure pour le joueur et pour ses adversaires.\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#issamQ2",
+      "dialog_node": "node_9_1590522519054",
+      "previous_sibling": "node_8_1590522490774"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Salut , je suis un système à base connaissance conçu pour répondre à vous questions à propos l'organisation d'un match de Foot , est que ce vous avez des questions ?"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My first skill",
+  "language": "en",
+  "description": ""
+}
