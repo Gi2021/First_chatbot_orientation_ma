@@ -13,5 +13,5 @@ https://www.coursera.org/learn/ai-with-ibm-watson?fbclid=IwAR1-7x9A4Z8b3d4JtExrw
 # qlq ecole ingénieur pour commencer (EHTP,Aiac,ENSEM,esith,EMI,Ensa,ENIM,INPT,ECC ...)
 # qlq data a propos ENSEM pour commencer mais on y a besoin de some cleaning  :
 https://drive.google.com/drive/u/1/folders/14p1jOVGlD-T2MjEG8SNsIBgnlcyd0xXF?fbclid=IwAR3CRegZDvzfGYhbbSBfM1hJtCqhNJ3R9Ij94UWoafoow_3Rfn6tnBVDbtw
-
-
+# skill-My-first-skill file est un exemple pour comprendre la structure de comment la data est enregistrer ! 
+ 
