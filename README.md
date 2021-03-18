@@ -9,4 +9,9 @@ C'est une idée de projet d'orientation basée sur un chatbot en open source pou
  *  qlq ecoles d'ingénieurs pour commencer le sujet en attendant d'en rajouter (EHTP,Aiac,ENSEM,esith,EMI,Ensa,ENIM,INPT,ECC ...)
  *  qlq data à propos de l'ENSEM:
 [ENSEM](https://drive.google.com/drive/u/1/folders/14p1jOVGlD-T2MjEG8SNsIBgnlcyd0xXF?fbclid=IwAR3CRegZDvzfGYhbbSBfM1hJtCqhNJ3R9Ij94UWoafoow_3Rfn6tnBVDbtw) 
+ ##  Exemple initital de chatbot à propos qlq question sur le foot  :
+   * [demo](https://drive.google.com/file/d/1qqQlZum9EJL5fyYAMH604oBL5MGMpWtd/view?usp=sharing) 
+   * [Json de demo : skill-My-first-skill ](https://github.com/Gi2021/First_chatbot_orientation_ma/blob/main/skill-My-first-skill%20(1).json) 
+
+ 
  
