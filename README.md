@@ -1,5 +1,6 @@
 # First_chatbot_orientation_ma
-C'est une idée de projet d'orientation basée sur un chatbot en open source pour facilter l'accès à l'information dans les écoles d'ingénieurs marocaines et françaises et pourquoi pas à l'internationales, waiting for your contribution :D
+C'est une idée de projet d'orientation basée sur un chatbot en open source pour facilter l'accès à l'information dans les écoles d'ingénieurs marocaines et françaises et pourquoi pas internationales ! 
+waiting for your contribution :D
 
 ## Voici quelques liens utiles:
  * [Avancement du project "Chatbot"](https://docs.google.com/spreadsheets/u/1/d/1B16R7-TZW5aXXyFqfZ5a3B8nz4w81-9m6OhWAEYXS_M/edit?usp=sharing&fbclid=IwAR2RTvD7AJZ9lZ8VYYXRq_XPbOzJrh3kRTLs15nKm7_tkfhDshjlWlgbBt4)
